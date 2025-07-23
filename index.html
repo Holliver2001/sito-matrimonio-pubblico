@@ -11,33 +11,37 @@
     <h1>Nicoletta & Davide</h1>
     <p>Ci sposiamo il <strong>28 Dicembre 2025</strong></p>
     <div id="countdown"></div>
+    <button id="apriRSVP" class="rsvp-button">Conferma la tua presenza</button>
   </header>
 
   <section id="programma">
     <h2>Programma della Giornata</h2>
     <ul>
       <li><strong>15:00</strong> – Cerimonia (Chiesa di San Vito, Piazza San Vito 15, Piossasco)</li>
-      <li><strong>17:00</strong> – Aperitivo </li>
+      <li><strong>17:00</strong> – Aperitivo</li>
       <li><strong>19:00</strong> – Cena & Festa</li>
     </ul>
   </section>
 
   <section id="mappa">
     <h2>Luogo della Cerimonia</h2>
-    <iframe 
-      src="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47883f3f3cc35121:0xccb488e5444ea2c6?sa=X&ved=1t:8290&ictx=111"
-      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2821.8177467058167!2d7.447411176683615!3d44.988013365083916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47883f3f3cc35121%3A0xccb488e5444ea2c6!2sChiesa%20San%20Vito!5e0!3m2!1sit!2sit!4v1753276195302!5m2!1sit!2sit"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     </iframe>
   </section>
 
-  <section id="rsvp">
-    <h2>Conferma la tua presenza</h2>
-    <iframe 
+  <div id="rsvpOverlay" class="overlay hidden">
+    <div class="overlay-content">
+      <button id="chiudiRSVP" class="close-button">&times;</button>
+      <h2>Conferma la tua presenza</h2>
+      <iframe 
         src="https://docs.google.com/forms/d/e/1FAIpQLSdBGc06r07C--0Zn3MBqhmngWoKYXiS1Vc0m-jGOEqg6kqmTw/viewform?embedded=true" 
         width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">
         Caricamento…
-    </iframe>
-  </section>
+      </iframe>
+    </div>
+  </div>
 
   <footer>
     <p>Con amore, Nicoletta & Davide ❤️</p>

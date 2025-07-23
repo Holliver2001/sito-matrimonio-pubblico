@@ -1,6 +1,5 @@
-// Countdown
 const countdown = document.getElementById("countdown");
-const weddingDate = new Date("2025-12-28T15:00:00");
+const weddingDate = new Date("2025-09-12T15:00:00");
 
 function updateCountdown() {
   const now = new Date();
@@ -21,21 +20,16 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// RSVP Form
-document.getElementById("rsvpForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const nome = this.nome.value;
-  const presenza = this.presenza.value;
-  const note = this.note.value.trim();
+const apriRSVP = document.getElementById("apriRSVP");
+const chiudiRSVP = document.getElementById("chiudiRSVP");
+const rsvpOverlay = document.getElementById("rsvpOverlay");
 
-  const msg = presenza === "sì"
-    ? `Grazie ${nome}! Non vediamo l'ora di vederti!`
-    : `Peccato, ${nome}. Ci mancherai!`;
-    
-  if (note) {
-    msg += `\nNota ricevuta: "${note}"`;
-  }
+apriRSVP.addEventListener("click", () => {
+  rsvpOverlay.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+});
 
-  document.getElementById("rsvpMessaggio").textContent = msg;
-  this.reset();
+chiudiRSVP.addEventListener("click", () => {
+  rsvpOverlay.classList.add("hidden");
+  document.body.style.overflow = "";
 });
