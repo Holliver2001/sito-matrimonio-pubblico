@@ -33,3 +33,18 @@ chiudiRSVP.addEventListener("click", () => {
   rsvpOverlay.classList.add("hidden");
   document.body.style.overflow = "";
 });
+
+const apriMappa = document.getElementById("apriMappa");
+const chiudiMappa = document.getElementById("chiudiMappa");
+const mappaOverlay = document.getElementById("mappaOverlay");
+
+apriMappa.addEventListener("click", (e) => {
+  e.preventDefault();
+  mappaOverlay.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+});
+
+chiudiMappa.addEventListener("click", () => {
+  mappaOverlay.classList.add("hidden");
+  document.body.style.overflow = "";
+});

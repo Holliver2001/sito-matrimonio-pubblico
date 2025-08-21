@@ -9,7 +9,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\alessandro.pisci\\Desktop\\aLTRO\\sito-matrimonio-pubblico\\index.html"
+            "file": "c:\\Users\\alessandro.pisci\\Desktop\\sito-matrimonio-pubblico\\index.html"
         }
     ]
 }

@@ -104,3 +104,10 @@ footer {
   color: #a02852;
   cursor: pointer;
 }
+
+.link-mappa {
+  color: #000000;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
