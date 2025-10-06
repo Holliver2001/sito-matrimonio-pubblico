@@ -1,50 +1,26 @@
+// Countdown al matrimonio
 const countdown = document.getElementById("countdown");
-const weddingDate = new Date("2025-12-28T15:00:00");
+const weddingDate = new Date("Dec 27, 2025 14:30:00").getTime();
 
-function updateCountdown() {
-  const now = new Date();
-  const diff = weddingDate - now;
+setInterval(() => {
+  const now = new Date().getTime();
+  const distance = weddingDate - now;
 
-  if (diff <= 0) {
-    countdown.textContent = "È il grande giorno!";
-    return;
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+  if (distance > 0) {
+    countdown.innerHTML = `${days} gg ${hours} h ${minutes} m`;
+  } else {
+    countdown.innerHTML = "Oggi è il grande giorno! 🎉";
   }
+}, 1000);
 
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+// Menu toggle per mobile
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
 
-  countdown.textContent = `${days} giorni, ${hours} ore, ${minutes} minuti`;
-}
-
-setInterval(updateCountdown, 1000);
-updateCountdown();
-
-const apriRSVP = document.getElementById("apriRSVP");
-const chiudiRSVP = document.getElementById("chiudiRSVP");
-const rsvpOverlay = document.getElementById("rsvpOverlay");
-
-apriRSVP.addEventListener("click", () => {
-  rsvpOverlay.classList.remove("hidden");
-  document.body.style.overflow = "hidden";
-});
-
-chiudiRSVP.addEventListener("click", () => {
-  rsvpOverlay.classList.add("hidden");
-  document.body.style.overflow = "";
-});
-
-const apriMappa = document.getElementById("apriMappa");
-const chiudiMappa = document.getElementById("chiudiMappa");
-const mappaOverlay = document.getElementById("mappaOverlay");
-
-apriMappa.addEventListener("click", (e) => {
-  e.preventDefault();
-  mappaOverlay.classList.remove("hidden");
-  document.body.style.overflow = "hidden";
-});
-
-chiudiMappa.addEventListener("click", () => {
-  mappaOverlay.classList.add("hidden");
-  document.body.style.overflow = "";
+menuToggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
 });

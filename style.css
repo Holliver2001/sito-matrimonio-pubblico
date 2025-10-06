@@ -1,113 +1,286 @@
+/* Stile generale */
+@font-face {
+  font-family: 'Shelley Script';
+  src: url('fonts/Shelley\ Script\ LT\ Std\ Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 0;
-  background: #fff9f9;
-  color: #333;
+  font-family: 'Shelley Script', cursive, serif;
+  color: #111;
+  text-align: center;
+  background: #fff;
 }
 
 header {
-  background: #ffe0e0;
-  text-align: center;
-  padding: 40px 20px;
+  background: #2b3d69;
+  color: #c0c0c0;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header h1 {
-  font-size: 3em;
+header .logo {
+  font-size: 1.2rem;
+}
+
+.menu-toggle {
+  font-size: 26px;
+  cursor: pointer;
+}
+
+nav .menu {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background: #2b3d69;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+nav .menu li {
+  margin: 10px 0;
+}
+
+nav .menu li a {
+  color: #c0c0c0;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Foto principale */
+.hero img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Sezione intro */
+.intro {
+  padding: 20px;
+}
+
+.intro h2 {
+  margin: 0 0 5px 0;
+  font-size: 2.8rem;
+  font-weight: normal;
+}
+
+.countdown-box {
+  display: inline-block;
+  color: #c0c0c0;
+  font-size: 1.3rem;
+  padding: 20px 40px;
+  background: url("img/sfondo.jpg") center/cover no-repeat; /* pennellata */
+}
+
+.countdown-box p {
   margin: 0;
 }
 
-#countdown {
-  font-size: 1.5em;
-  margin-top: 10px;
-  color: #a00;
-}
-
-section {
-  padding: 30px 20px;
-  max-width: 800px;
-  margin: auto;
-}
-
-section h2 {
-  color: #cc3366;
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  padding: 8px 0;
-  font-size: 1.1em;
-}
-
-footer {
-  background: #ffe0e0;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-}
-
-.rsvp-button {
-  background: #cc3366;
-  color: white;
-  font-size: 1.1em;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-.rsvp-button:hover {
-  background: #a02852;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 240, 245, 0.95);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  padding: 30px;
-  box-sizing: border-box;
-}
-.overlay.hidden {
-  display: none;
-}
-.overlay-content {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 800px;
-  width: 100%;
-  height: 90%;
-  overflow-y: auto;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+/* Programma */
+.programma h2 {
+  margin: 40px auto 30px;
+  font-size: 2.0rem;
+  font-weight: normal;
   position: relative;
+  display: inline-block;
+  padding: 15px 0;
 }
 
-.close-button {
+.programma h2::before,
+.programma h2::after {
+  content: "";
   position: absolute;
-  top: 15px;
-  right: 20px;
-  background: transparent;
-  font-size: 2em;
-  border: none;
-  color: #a02852;
-  cursor: pointer;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;   /* più corto del testo */
+  height: 1px;
+  background: black;
 }
 
-.link-mappa {
-  color: #000000;
-  text-decoration: underline;
-  cursor: pointer;
+.programma h2::before {
+  top: 0;    /* linea sopra */
 }
 
+.programma h2::after {
+  bottom: 0; /* linea sotto */
+}
+
+/* --- Layout generale eventi --- */
+.evento {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* le colonne si allungano uguali in altezza */
+  margin-bottom: 35px;
+  text-align: left;
+  gap: 20px;
+  position: relative;
+  padding: 0 15%;
+  padding-bottom: 30px; /* spazio per la linea orizzontale */
+}
+
+/* Variante sinistra: testo a sinistra, orario a destra */
+.evento.sinistra {
+  flex-direction: row;
+}
+
+/* Variante destra: testo a destra, orario a sinistra */
+.evento.destra {
+  flex-direction: row-reverse;
+}
+
+/* Colonne interne */
+.evento-left {
+  flex: 0 0 70%; /* testo 70% */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* testo centrato verticalmente */
+  align-items: flex-start; /* verso il centro orizzontale */
+  text-align: left;
+}
+
+.evento-right {
+  flex: 0 0 30%; /* orario 30% */
+  display: flex;
+  justify-content: center; /* centrato orizzontalmente */
+  align-items: center;     /* centrato verticalmente */
+}
+
+/* Correzione per eventi “destra” (invertiti) */
+.evento.destra .evento-left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.evento.destra .evento-right {
+  justify-content: center;
+}
+
+/* Titoli e testo */
+.evento h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.8rem;
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+}
+
+.evento p {
+  margin: 0;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+/* Orario */
+.evento .ora {
+  color: #c0c0c0;
+  padding: 8px 15px;
+  border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  background: url("img/sfondo.jpg") center/cover no-repeat; /* pennellata */
+}
+
+/* --- Linea orizzontale tra eventi --- */
+.evento:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .evento {
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0 8%;
+    padding-bottom: 25px;
+  }
+
+  .evento-left {
+    flex: 0 0 70%;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .evento-right {
+    flex: 0 0 30%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .evento.destra .evento-left {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .evento h3 {
+    font-size: 1.8rem;
+  }
+
+  .evento p {
+    font-size: 1.1rem;
+  }
+
+  .evento .ora {
+    font-size: 1.6rem;
+  }
+
+  .evento:not(:last-child)::after {
+    width: 85%;
+  }
+}
+
+/* Footer */
+footer {
+  background: #2b3d69;
+  color: #c0c0c0;
+  padding: 20px;
+  
+}
+
+footer p {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+footer h3 {
+  font-size: 2.0rem;
+  font-weight: normal;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav .menu {
+    display: none;
+    flex-direction: column;
+    background: #2b3d69;
+    padding: 10px;
+  }
+
+  nav .menu li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.active .menu {
+    display: flex;
+  }
+}
