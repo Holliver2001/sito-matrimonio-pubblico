@@ -201,6 +201,19 @@ nav .menu li a {
   background: rgba(0, 0, 0, 0.15);
 }
 
+/* Mantiene i link sempre neri */
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+a:visited,
+a:hover,
+a:active {
+  color: black;
+  text-decoration: underline;
+}
+
 /* --- Mobile --- */
 @media (max-width: 768px) {
   .evento {
@@ -243,6 +256,20 @@ nav .menu li a {
   .evento:not(:last-child)::after {
     width: 85%;
   }
+
+  /* Mantiene i link sempre neri */
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  a:visited,
+  a:hover,
+  a:active {
+    color: black;
+    text-decoration: underline;
+  }
+
 }
 
 /* Footer */
