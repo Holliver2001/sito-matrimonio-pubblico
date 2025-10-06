@@ -71,11 +71,12 @@ nav .menu li a {
 /* Sezione coordinate bancarie */
 .coordinate-bancarie {
   padding: 20px;
-  font-size: 1.1rem;
-  font-family: Beleza;
+  font-size: 1.2rem;
+  font-family: 'Belleza';
+  src: url('fonts/Belleza-Regular.ttf') format('truetype');
   font-weight: normal;
   text-align: left;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 /* Sezione ringraziamento */
