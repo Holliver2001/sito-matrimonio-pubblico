@@ -1,0 +1,126 @@
+/* Stile generale */
+@font-face {
+  font-family: 'Shelley Script';
+  src: url('fonts/Shelley\ Script\ LT\ Std\ Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Shelley Script', cursive, serif;
+  color: #111;
+  text-align: center;
+  background: #fff;
+}
+
+header {
+  background: #2b3d69;
+  color: #c0c0c0;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.2rem;
+}
+
+.menu-toggle {
+  font-size: 26px;
+  cursor: pointer;
+}
+
+nav .menu {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background: #2b3d69;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+nav .menu li {
+  margin: 10px 0;
+}
+
+nav .menu li a {
+  color: #c0c0c0;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Foto principale */
+.hero img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Sezione intro */
+.intro {
+  padding: 20px;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+/* Sezione coordinate bancarie */
+.coordinate-bancarie {
+  padding: 20px;
+  font-size: 1.1rem;
+  font-family: Beleza;
+  font-weight: normal;
+  text-align: left;
+  margin-left: 20px;
+}
+
+/* Sezione ringraziamento */
+.ringraziamento {
+  padding: 20px;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+/* Footer */
+footer {
+  background: #2b3d69;
+  color: #c0c0c0;
+  padding: 20px;
+  
+}
+
+footer p {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+footer h3 {
+  font-size: 2.0rem;
+  font-weight: normal;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav .menu {
+    display: none;
+    flex-direction: column;
+    background: #2b3d69;
+    padding: 10px;
+  }
+
+  nav .menu li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.active .menu {
+    display: flex;
+  }
+}
