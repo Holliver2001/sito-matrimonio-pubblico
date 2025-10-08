@@ -288,6 +288,17 @@ footer p {
 footer h3 {
   font-size: 2.0rem;
   font-weight: normal;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+
+footer h3 img.cuore {
+  width: 28px;
+  height: auto;
+  vertical-align: middle;
+  filter: brightness(0) invert(0.8);
 }
 
 /* Responsive */
