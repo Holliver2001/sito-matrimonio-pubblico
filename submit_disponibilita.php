@@ -58,3 +58,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Errore: modulo non inviato correttamente.";
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta http-equiv="refresh" content="0;url=https://iltuodominio.it/grazie.html">
+  <script>
+    window.location.href = "https://iltuodominio.it/grazie.html";
+  </script>
+</head>
+<body>
+  <p>Reindirizzamento in corso...</p>
+</body>
+</html>
