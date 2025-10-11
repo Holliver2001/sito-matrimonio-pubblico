@@ -14,42 +14,54 @@
       <ul class="menu">
         <li><a href="index.html">Homepage</a></li>
         <li><a href="disponibilita.html">Disponibilità</a></li>
-        <li><a href="iban.html">IBAN</a></li>
+        <li><a href="index.html#torta">IBAN</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="intro">
     <h2>Conferma la tua presenza</h2>
-    <p>Compila il modulo qui sotto per farci sapere se sarai presente al matrimonio.</p>
+    <p>Compila il modulo qui sotto per farci sapere chi parteciperà al matrimonio 💕</p>
   </section>
 
   <section class="form-section">
     <form action="submit_disponibilita.php" method="POST">
-      <label for="nome">Nome e Cognome:</label>
-      <input type="text" id="nome" name="nome" required>
+      <!-- Nomi -->
+      <label for="nome1">Nome e Cognome (obbligatorio):</label>
+      <input type="text" id="nome1" name="nome1" required>
 
-      <label for="nome">Nome e Cognome:</label>
-      <input type="text" id="nome" name="nome">
+      <label for="nome2">Nome e Cognome (facoltativo):</label>
+      <input type="text" id="nome2" name="nome2">
 
-      <label for="nome">Nome e Cognome:</label>
-      <input type="text" id="nome" name="nome">
+      <label for="nome3">Nome e Cognome (facoltativo):</label>
+      <input type="text" id="nome3" name="nome3">
 
-      <label for="nome">Nome e Cognome:</label>
-      <input type="text" id="nome" name="nome">
+      <label for="nome4">Nome e Cognome (facoltativo):</label>
+      <input type="text" id="nome4" name="nome4">
 
-      <label for="email">Email:</label>
+      <label for="nome5">Nome e Cognome (facoltativo):</label>
+      <input type="text" id="nome5" name="nome5">
+
+      <!-- Email -->
+      <label for="email">Email (obbligatoria):</label>
       <input type="email" id="email" name="email" required>
 
-      <label for="presenza">Sarai presente?</label>
+      <!-- Presenza -->
+      <label for="presenza">Ci sarai / Ci sarete? (obbligatorio):</label>
       <select id="presenza" name="presenza" required>
         <option value="">--Seleziona--</option>
-        <option value="si">Sì</option>
-        <option value="no">No</option>
+        <option value="Si">Sì</option>
+        <option value="No">No</option>
       </select>
 
-      <label for="messaggio">Messaggio (opzionale):</label>
-      <textarea id="messaggio" name="messaggio"></textarea>
+      <!-- Allergie -->
+      <label for="allergie">Intolleranze / Allergie (facoltativo):</label>
+      <textarea id="allergie" name="allergie" rows="3"></textarea>
+
+      <!-- Telefono -->
+      <label for="telefono">Recapito telefonico (solo numeri, obbligatorio):</label>
+      <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8,15}" required
+             placeholder="Es. 3331234567">
 
       <button type="submit">Invia</button>
     </form>

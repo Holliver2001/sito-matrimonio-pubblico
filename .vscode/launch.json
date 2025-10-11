@@ -9,7 +9,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Apri il sito matrimonio (localhost)",
-            "file": "http://localhost/matrimonio/index.html"
+            "url": "http://localhost/matrimonio/sito-matrimonio-pubblico/index.html"
         }
     ]
 }
