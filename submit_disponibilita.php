@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     fclose($fp);
 
     // Redirect alla pagina di ringraziamento
-    header("Location: grazie.html");
+    header("Location: https://matrimonio-nicoletta-davide.netlify.app/grazie.html");
     exit;
 } else {
     echo "Errore: modulo non inviato correttamente.";
