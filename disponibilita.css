@@ -6,31 +6,29 @@
   font-style: normal;
 }
 
-/* === STILE GENERALE === */
 body {
   margin: 0;
   font-family: 'Shelley Script', cursive, serif;
-  color: #000;
-  background-color: #fff;
+  color: #111;
   text-align: center;
+  background-color: #fff;
 }
 
-/* === HEADER === */
 header {
   background: #2b3d69;
   color: #c0c0c0;
-  padding: 10px 15px;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 header .logo {
-  font-size: 1rem;
+  font-size: 1.2 rem;
 }
 
 .menu-toggle {
-  font-size: 24px;
+  font-size: 26px;
   cursor: pointer;
 }
 
@@ -39,7 +37,7 @@ nav .menu {
   display: none;
   flex-direction: column;
   position: absolute;
-  top: 55px;
+  top: 60px;
   right: 10px;
   background: #2b3d69;
   border-radius: 8px;
@@ -47,7 +45,7 @@ nav .menu {
 }
 
 nav .menu li {
-  margin: 8px 0;
+  margin: 10px 0;
 }
 
 nav .menu li a {
@@ -99,8 +97,7 @@ label {
 }
 
 input,
-select,
-textarea {
+select {
   font-family: 'Shelley Script', cursive;
   font-size: 1rem;
   padding: 8px 10px;
@@ -111,12 +108,7 @@ textarea {
   text-align: left;
 }
 
-textarea {
-  resize: none;
-}
-
-input::placeholder,
-textarea::placeholder {
+input::placeholder {
   color: #aaa;
   font-style: italic;
 }
@@ -141,7 +133,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* === FOOTER === */
+/* Footer */
 footer {
   background: #2b3d69;
   color: #c0c0c0;
@@ -169,8 +161,30 @@ footer h3 img.cuore {
   filter: brightness(0) invert(0.8);
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  nav .menu {
+    display: none;
+    flex-direction: column;
+    background: #2b3d69;
+    padding: 10px;
+  }
+
+  nav .menu li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.active .menu {
+    display: flex;
+  }
+}
+
 /* === RESPONSIVE === */
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
   header .logo {
     font-size: 0.9rem;
   }
@@ -193,8 +207,4 @@ footer h3 img.cuore {
     font-size: 1.2rem;
     padding: 8px 25px;
   }
-
-  footer p {
-    font-size: 1rem;
-  }
-}
+}*/
