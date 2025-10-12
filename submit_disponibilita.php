@@ -62,9 +62,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta http-equiv="refresh" content="0;url=https://iltuodominio.it/grazie.html">
+  <meta http-equiv="refresh" content="0;url=https://matrimonio-nicoletta-davide.netlify.app/grazie.html">
   <script>
-    window.location.href = "https://iltuodominio.it/grazie.html";
+    window.location.href = "https://matrimonio-nicoletta-davide.netlify.app/grazie.html";
   </script>
 </head>
 <body>
