@@ -182,29 +182,3 @@ footer h3 img.cuore {
     display: flex;
   }
 }
-
-/* === RESPONSIVE === */
-/*@media (max-width: 600px) {
-  header .logo {
-    font-size: 0.9rem;
-  }
-
-  .intro h2 {
-    font-size: 1.8rem;
-  }
-
-  label {
-    font-size: 1rem;
-  }
-
-  input,
-  select,
-  textarea {
-    font-size: 0.95rem;
-  }
-
-  button {
-    font-size: 1.2rem;
-    padding: 8px 25px;
-  }
-}*/
