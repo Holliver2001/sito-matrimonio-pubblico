@@ -145,22 +145,28 @@ button:hover {
 footer {
   background: #2b3d69;
   color: #c0c0c0;
-  padding: 25px 15px;
-  text-align: center;
-  font-family: 'Shelley Script', cursive;
+  padding: 20px;
 }
 
 footer p {
-  margin: 0;
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-size: 1.4rem;
+  font-weight: normal;
 }
 
 footer h3 {
-  margin: 8px 0 0 0;
-  font-size: 1.6rem;
+  font-size: 2.0rem;
   font-weight: normal;
-  font-style: italic;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+
+footer h3 img.cuore {
+  width: 28px;
+  height: auto;
+  vertical-align: middle;
+  filter: brightness(0) invert(0.8);
 }
 
 /* === RESPONSIVE === */
