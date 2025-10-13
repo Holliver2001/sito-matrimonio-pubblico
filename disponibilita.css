@@ -24,7 +24,7 @@ header {
 }
 
 header .logo {
-  font-size: 1.2 rem;
+  font-size: 1.4rem;
 }
 
 .menu-toggle {
@@ -51,7 +51,9 @@ nav .menu li {
 nav .menu li a {
   color: #c0c0c0;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-family: 'Belleza';
+  src: url('fonts/Belleza-Regular.ttf') format('truetype');
 }
 
 /* === INTRO === */
@@ -62,12 +64,12 @@ nav .menu li a {
 .intro h2 {
   font-family: 'Shelley Script', cursive;
   font-style: italic;
-  font-size: 2rem;
+  font-size: 2.7rem;
   margin-bottom: 10px;
 }
 
 .intro p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin: 0;
   color: #000;
 }
@@ -90,17 +92,16 @@ form {
 
 label {
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-style: italic;
-  margin-bottom: 4px;
+  margin-top: 8px;
   color: #000;
 }
 
 input,
 select {
-  font-family: 'Shelley Script', cursive;
-  font-size: 1rem;
-  padding: 8px 10px;
+  font-family: 'Shelley Script';
+  font-size: 1.2rem;
   border: none;
   border-bottom: 1px solid #000;
   background-color: transparent;
@@ -122,8 +123,9 @@ button {
   border: none;
   padding: 10px 35px;
   border-radius: 6px;
-  font-family: 'Shelley Script', cursive;
-  font-size: 1.4rem;
+  font-family: 'Belleza';
+  src: url('fonts/Belleza-Regular.ttf') format('truetype');
+  font-size: 1.6rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -137,16 +139,16 @@ button:hover {
 footer {
   background: #2b3d69;
   color: #c0c0c0;
-  padding: 20px;
+  padding: 10px;
 }
 
 footer p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: normal;
 }
 
 footer h3 {
-  font-size: 2.0rem;
+  font-size: 2.2rem;
   font-weight: normal;
   align-items: center;
   justify-content: center;

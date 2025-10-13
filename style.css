@@ -24,7 +24,7 @@ header {
 }
 
 header .logo {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .menu-toggle {
@@ -51,7 +51,9 @@ nav .menu li {
 nav .menu li a {
   color: #c0c0c0;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-family: 'Belleza';
+  src: url('fonts/Belleza-Regular.ttf') format('truetype');
 }
 
 /* Foto principale */
@@ -68,14 +70,14 @@ nav .menu li a {
 
 .intro h2 {
   margin: 0 0 5px 0;
-  font-size: 2.8rem;
+  font-size: 3.0rem;
   font-weight: normal;
 }
 
 .countdown-box {
   display: inline-block;
   color: #c0c0c0;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   padding: 20px 40px;
   background: url("img/sfondo.jpg") center/cover no-repeat; /* pennellata */
 }
@@ -87,7 +89,7 @@ nav .menu li a {
 /* Programma */
 .programma h2 {
   margin: 40px auto 30px;
-  font-size: 2.0rem;
+  font-size: 2.2rem;
   font-weight: normal;
   position: relative;
   display: inline-block;
@@ -166,7 +168,7 @@ nav .menu li a {
 /* Titoli e testo */
 .evento h3 {
   margin: 0 0 5px 0;
-  font-size: 1.8rem;
+  font-size: 2.0rem;
   font-weight: normal;
   font-style: normal;
   text-align: left;
@@ -174,7 +176,7 @@ nav .menu li a {
 
 .evento p {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-align: left;
 }
 
@@ -242,15 +244,15 @@ a:active {
   }
 
   .evento h3 {
-    font-size: 1.8rem;
+    font-size: 2.0rem;
   }
 
   .evento p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .evento .ora {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .evento:not(:last-child)::after {
@@ -276,16 +278,16 @@ a:active {
 footer {
   background: #2b3d69;
   color: #c0c0c0;
-  padding: 20px;
+  padding: 10px;
 }
 
 footer p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: normal;
 }
 
 footer h3 {
-  font-size: 2.0rem;
+  font-size: 2.2rem;
   font-weight: normal;
   align-items: center;
   justify-content: center;

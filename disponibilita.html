@@ -14,7 +14,7 @@
       <ul class="menu">
         <li><a href="index.html">Homepage</a></li>
         <li><a href="disponibilita.html">Disponibilità</a></li>
-        <li><a href="iban.html">IBAN</a></li>
+        <li><a href="iban.html">Partire con il piede giusto</a></li>
       </ul>
     </nav>
   </header>
@@ -27,7 +27,10 @@
     <form action="submit_disponibilita.php" method="POST">
       <!-- Nomi -->
       <label for="nome1">Nome e Cognome:</label>
-      <input type="text" id="nome1" name="nome1" required>
+      <div class="autocomplete">
+        <input type="text" id="nome1" name="nome1" required placeholder="Scrivi per cercare...">
+        <div id="suggestions" class="autocomplete-items"></div>
+      </div>
 
       <label for="nome2">Nome e Cognome:</label>
       <input type="text" id="nome2" name="nome2">
@@ -72,7 +75,7 @@
       Un amore semplice <img src="img/logo.png" alt="cuore" class="cuore"> <br>
       Davide e Nicoletta
     </h3>
-    <p>Per ulteriori informazioni controllare il menu a tendina all’inizio del sito o scrivere su Whatsapp ai seguenti numeri</p>
+    <p>Per ulteriori informazioni controllare<br>il menu a tendina all’inizio del sito o<br>scrivere su Whatsapp ai seguenti numeri</p>
     <p>D: 3488782215 &nbsp;&nbsp; N: 3661753015</p>
   </footer>
 
